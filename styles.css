@@ -1,0 +1,235 @@
+:root{
+
+    --p-strong-cyan:hsl(172,67%,45%);
+    
+    --n-very-dark-cyan:hsl(183,100%,15%);
+    --n-dark-grayish-cyan:hsl(186,14%,43%);
+    --n-grayish-cyan:hsl(184,14%,56%);
+    --n-lgc:hsl(185,41%,84%);
+    --n-vlgc:hsl(189,41%,97%);
+    --n-white:hsl(0,0%,100%);
+
+    --ff:'Space Mono',serif;
+    --fw:700;
+
+}
+
+/**** RESET *****/
+*{
+    margin: 0;
+}
+
+*,
+*::before,
+*::after{
+box-sizing: border-box;
+}
+
+html,
+body{
+height: 100%;
+}
+
+img,
+picture,
+svg{
+    display: block;
+    max-width: 100%;
+}
+
+form,
+button,
+input{
+    font: inherit;
+}
+
+input{
+    font-size: 24px;
+}
+
+/*******Genral Styling********/
+
+
+body{
+    background-color: var(--n-lgc);
+    color: var(--n-dark-grayish-cyan);
+    font-family: var(--ff);
+    font-weight: var(--fw);
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    max-width: 400px;
+}
+
+.wrapper{
+    background-color: var(--n-white);
+    border-radius: 1.5rem; 
+    padding: 1rem;
+   
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+/*** TITLE ***/
+h1{
+    letter-spacing: .5rem;
+    text-align: center;
+    margin: 1rem ;
+}
+
+
+/**** INPUTS *****/
+input{
+    background-color: var(--n-vlgc);
+    color: var(--n-very-dark-cyan);
+    border-radius: 5px;
+    text-align: end;
+    cursor: pointer;
+}
+
+.input-wrapper >  span{
+    font-size: 1rem;
+    padding-top: 1.5rem ;
+    padding-bottom: .5rem;
+}
+
+
+
+
+/*** BUTTONS ****/
+.buttons-div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tip{
+    cursor: pointer;
+    width: 45%;
+    padding: .5rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    background-color: var(--n-very-dark-cyan);
+    color: var(--n-white);
+}
+
+.custom{
+    width: 45%;
+    color: var(--n-very-dark-cyan);
+    text-align: end;
+    border-radius: 5px;
+}
+
+
+/*****CARD*****/
+
+.card{
+    background-color: var(--n-very-dark-cyan);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.card > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-wrapper :first-child{
+    color: var(--n-white);
+    font-size: 1.5rem;
+}
+
+.card  span{
+    color: var(--p-strong-cyan);
+    font-size: 2rem;
+}
+
+.reset{
+    width: 100%;
+    border-radius: 5px;
+    color: var(--n-very-dark-cyan);
+    background-color: var(--n-dark-grayish-cyan);
+    padding: .5rem ;
+    margin-top: 1rem;
+}
+
+
+/**SPAN DIV**/
+
+.span-div{
+display: flex;
+font-size: 1rem;
+padding-top: 1.5rem ;
+padding-bottom: .5rem;
+}
+
+.span-div > :last-child{
+    margin-left: auto;
+    color: red;
+    display: none;
+}
+
+
+/********
+HOVER EFFECT   
+**********/
+.tip:hover,.tip:focus{
+    background-color: var(--p-strong-cyan);
+    color: var(--n-very-dark-cyan);
+}
+
+.reset:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+/*****
+media Quories
+*******/
+
+@media (min-width:1000px) {
+    main {
+        max-width: 900px;
+    }
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+
+    .input-wrapper{
+        grid-column: 1;
+    }
+
+    .card{
+        grid-column: 2;
+    }
+
+    .card >div {
+        padding: 1rem 0;
+    }
+
+    .card  span {
+      font-size: 3rem;
+    }
+
+    .reset{
+        margin-top:10rem;
+    }
+
+
+}
